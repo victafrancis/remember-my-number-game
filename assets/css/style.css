@@ -6,6 +6,11 @@
     word-wrap: break-word;
 }
 
+.jumbotron#titleBanner{
+    background-color: black;
+    color: white;
+}
+
 #info {
     padding: 5px;
     font-size: large;
@@ -17,4 +22,8 @@
 
 span{
     font-weight: bold;
+}
+
+button{
+    margin: 2px;
 }
