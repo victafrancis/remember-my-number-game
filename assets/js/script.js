@@ -48,7 +48,7 @@ memo.onclick = function () {
 
 //checks if the right number is pressed. If not lose a life. If yes, continue
 function checkGood(){
-    memo.innerHTML = "[tap to show again]"; //hides numbers
+    memo.innerHTML = "[show again]"; //hides numbers
     if(numMemo[compareNum] !== currentNum){
         checkLose();
     } else {
