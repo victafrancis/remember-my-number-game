@@ -153,6 +153,7 @@ function timeLeft(){
         alert("TIME'S UP!\n\nYou memorized up to " + (numLength-1) + " digits long! Nice job!\n\nLet's try that again!");
         checkHighScore();
         startGame();
+        setTimeout("timeLeft()",1000); //starts the timer
     } else {
         totalSeconds --;
         minutes = parseInt(totalSeconds/60);
