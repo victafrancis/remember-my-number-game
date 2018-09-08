@@ -11,6 +11,7 @@ let timer = document.getElementById("timer");
 
 window.onload = function(){
     startGame();
+    setTimeout("timeLeft()",1000); //starts the timer
 };
 
 function startGame(){
@@ -30,7 +31,6 @@ function startGame(){
 
     //initialize the number to press
     memo.innerHTML = numMemo;
-    memo.setAttribute("style","color: white");
 
     //initialize variables for the timer
     totalSeconds = 300;
@@ -38,17 +38,17 @@ function startGame(){
     seconds = parseInt(totalSeconds%60);
     seconds = ("00" + seconds).substr(-2);
     timer.innerHTML = minutes + ":" + seconds;
-    setTimeout("timeLeft()",1000);
 }
 
 //this will reshow the numbers to press
 memo.onclick = function () {
-    memo.setAttribute("style","color: white");
+    memo.innerHTML = numMemo;
     compareNum = 0; //by resetting this counter, the player will have to enter the order of numbers from the start
 };
 
 //checks if the right number is pressed. If not lose a life. If yes, continue
 function checkGood(){
+    memo.innerHTML = "[tap to show again]"; //hides numbers
     if(numMemo[compareNum] !== currentNum){
         checkLose();
     } else {
@@ -60,6 +60,7 @@ function checkGood(){
 function checkLose(){
     lives--;
     infoB.innerHTML = lives;
+    memo.innerHTML = numMemo;
     if (lives === 0){
         if (numLength === 2){
             alert("You haven't gotten past the first 2 digits?\n\nGAME OVER!")
@@ -105,52 +106,42 @@ function checkHighScore(){
 }
 
 function number1() {
-    memo.setAttribute("style","color: black");
     currentNum = "1";
     checkGood();
 }
 function number2() {
-    memo.setAttribute("style","color: black");
     currentNum = "2";
     checkGood();
 }
 function number3() {
-    memo.setAttribute("style","color: black");
     currentNum = "3";
     checkGood();
 }
 function number4() {
-    memo.setAttribute("style","color: black");
     currentNum = "4";
     checkGood();
 }
 function number5() {
-    memo.setAttribute("style","color: black");
     currentNum = "5";
     checkGood();
 }
 function number6() {
-    memo.setAttribute("style","color: black");
     currentNum = "6";
     checkGood();
 }
 function number7() {
-    memo.setAttribute("style","color: black");
     currentNum = "7";
     checkGood();
 }
 function number8() {
-    memo.setAttribute("style","color: black");
     currentNum = "8";
     checkGood();
 }
 function number9() {
-    memo.setAttribute("style","color: black");
     currentNum = "9";
     checkGood();
 }
 function number0() {
-    memo.setAttribute("style","color: black");
     currentNum = "0";
     checkGood();
 }
