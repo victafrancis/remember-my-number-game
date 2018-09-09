@@ -1,7 +1,7 @@
 
 
 //when window loads, start the game right away
-let numLength, numMemo, lives, compareNum, currentNum, highScore = 0;
+let numLength, numMemo, lives, compareNum, currentNum, highScore = 19;
 let totalSeconds, minutes, seconds; //variables for timer
 let memo = document.getElementById("memorize"); //this is the current set of digits to memorize
 let infoA = document.getElementById("infoA"); //this is for the current number of digits to memorize
